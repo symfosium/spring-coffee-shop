@@ -1,0 +1,54 @@
+/* card-style.css */
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card {
+    width: 250px; /* уменьшаем ширину карточки */
+    margin: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    width: 100%; /* делаем изображение заполняющим всю ширину карточки */
+    height: 150px; /* задаем фиксированную высоту изображения */
+    object-fit: cover; /* растягиваем изображение, чтобы оно полностью заполняло заданные размеры */
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    margin-top: 0;
+}
+
+.card-content p {
+    margin: 5px 0;
+}
+
+.card-content p span {
+    font-weight: bold;
+}
+
+.btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}

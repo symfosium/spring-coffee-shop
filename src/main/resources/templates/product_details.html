@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Product Details</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/product-details-styles.css}">
+</head>
+<body>
+<h2>Product Details</h2>
+</body>
+<div>
+    <p>Title: <span th:text="${product.title}"></span></p>
+    <p>Description: <span th:text="${product.description}"></span></p>
+    <p>Price: <span th:text="${product.price}"></span></p>
+    <p>City: <span th:text="${product.city}"></span></p>
+    <p>Seller: <span th:text="${product.seller}"></span></p>
+    <p>Images:</p>
+    <ul>
+        <li th:each="image : ${product.images}" style="list-style-type: none">
+            <img th:src="@{'/images/' + ${image.id}}" style="max-width: 100px; max-height: 100px;">
+        </li>
+    </ul>
+</div>
+<a href="/products" class="btn">Назад</a>
+</html>

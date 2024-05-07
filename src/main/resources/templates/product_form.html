@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Create New Product</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/form-style.css}">
+</head>
+<body>
+<h2>Create New Product</h2>
+<form action="/products/save" method="post" enctype="multipart/form-data" th:object="${product}">
+    <div>
+        <label>Title:</label>
+        <input type="text" th:field="*{title}" required/>
+    </div>
+    <div>
+        <label>Description:</label>
+        <textarea th:field="*{description}" required></textarea>
+    </div>
+    <div>
+        <label>Price:</label>
+        <input type="number" th:field="*{price}" required/>
+    </div>
+    <div>
+        <label>City:</label>
+        <input type="text" th:field="*{city}" required/>
+    </div>
+    <div>
+        <label>Seller:</label>
+        <input type="text" th:field="*{seller}" required/>
+    </div>
+    <div>
+        <label>Images:</label>
+        <input type="file" name="files" multiple accept="image/*" required/>
+    </div>
+    <!-- Дополнительные инпуты для загрузки дополнительных картинок -->
+    <div>
+        <label>Additional Images:</label>
+        <input type="file" name="files" multiple accept="image/*"/>
+    </div>
+    <div>
+        <label>More Images:</label>
+        <input type="file" name="files" multiple accept="image/*"/>
+    </div>
+    <button type="submit">Create</button>
+</form>
+</body>
+</html>
