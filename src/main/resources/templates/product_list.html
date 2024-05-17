@@ -12,13 +12,17 @@
         <div class="card-content">
             <h3 th:text="${product.title}"></h3>
             <p th:text="${product.description}"></p>
-            <p><strong>Price:</strong> <span th:text="${product.price}"></span></p>
-            <p><strong>City:</strong> <span th:text="${product.city}"></span></p>
-            <p><strong>Seller:</strong> <span th:text="${product.seller}"></span></p>
-            <a th:href="@{'/products/' + ${product.id}}" class="btn">Подробнее</a>
+            <p><strong>Hinta:</strong> <span th:text="${product.price}"></span></p>
+            <p><strong>Kaupunki:</strong> <span th:text="${product.city}"></span></p>
+            <p><strong>Myyjä:</strong> <span th:text="${product.seller}"></span></p>
+            <a th:href="@{'/products/' + ${product.id}}" class="btn">Lisää</a>
+            <br>
+            <a th:href="@{'/products/delete?id=' + ${product.id}}" class="btn btn-delete" onclick="return confirm('Are you sure you want to delete this product?');">Poista</a>
         </div>
     </div>
 </div>
-<a href="/" class="btn">На Главную</a>
+<a href="/" class="btn">Etusivulle</a>
+<br>
+<a href="/products/new" class="btn btn-add">Lisää uuden tavaran</a>
 </body>
 </html>

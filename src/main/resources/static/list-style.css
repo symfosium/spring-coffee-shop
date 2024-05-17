@@ -52,3 +52,19 @@
 .btn:hover {
     background-color: #45a049;
 }
+
+.btn-delete {
+    background-color: #ec2222;
+}
+
+.btn-delete:hover {
+    background-color: #fd0000;
+}
+
+.btn-add {
+    background-color: deepskyblue;
+}
+
+.btn-add:hover {
+    background-color: #017398;
+}

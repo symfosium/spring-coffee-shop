@@ -87,4 +87,10 @@ public class ProductController {
         model.addAttribute("products", productRepository.findAll());
         return "product_list"; // Представление для отображения списка продуктов
     }
+
+    @RequestMapping(value = "/delete", method = RequestMethod.GET)
+    public String deleteProduct(@RequestParam("id") Long id) {
+        productRepository.deleteById(id);
+        return "redirect:/products";
+    }
 }
